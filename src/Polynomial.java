@@ -46,6 +46,14 @@ public class Polynomial {
 			return String.valueOf(summands);
 		return summand + "+" + summands;
 	}
+
+	int getDegree() {
+		int degree = 0;
+		if (summand != null)
+			degree = summand.getDegree();
+		int degreeNext = summands.getDegree();
+		return Math.max(degree, degreeNext);
+	}
 /**
  * @param input String representation of polynomial
  * @return the resulting polynomial

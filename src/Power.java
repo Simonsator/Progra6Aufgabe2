@@ -43,6 +43,12 @@ public class Power {
 				return literal + "^" + exponent;
 		}
 	}
+
+	int getDegree() {
+		if (literal == null)
+			return 0;
+		return literal.getDegree() * exponent;
+	}
 	/**
 	 * Converts an input string to a power
 	 * Input

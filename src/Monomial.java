@@ -42,6 +42,17 @@ public class Monomial {
 			return "1";
 		return factor + "*" + factors;
 	}
+
+	int getDegree() {
+		if (isZero())
+			return 0;
+		int degree = 0;
+		if (factor != null)
+			degree = factor.getDegree();
+		if (factors != null)
+			degree += factor.getDegree();
+		return degree;
+	}
 	/**
 	 * @param input String representation of monomial
 	 * @return the resulting monomial

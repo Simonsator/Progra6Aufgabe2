@@ -46,6 +46,12 @@ public class Literal {
 			return 1;
 		return 0;
 	}
+
+	public Literal substitute(String toSubstitute, double value) {
+		if (!name.equals(toSubstitute))
+			return new Literal(this);
+		return new Literal(value);
+	}
 	/**
 	 * Converts an input string to a literal
 	 * @param input  String representation of literal

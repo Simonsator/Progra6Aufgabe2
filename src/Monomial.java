@@ -53,6 +53,13 @@ public class Monomial {
 			degree += factor.getDegree();
 		return degree;
 	}
+
+	Monomial substitute(String toSubstitute, double value) {
+		if (!isZero())
+			return new Monomial(factor.substitute(toSubstitute, value), factors.substitute(toSubstitute, value));
+		return new Monomial(this);
+	}
+
 	/**
 	 * @param input String representation of monomial
 	 * @return the resulting monomial

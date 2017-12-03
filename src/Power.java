@@ -49,6 +49,12 @@ public class Power {
 			return 0;
 		return literal.getDegree() * exponent;
 	}
+
+	public Power substitute(String toSubstitute, double value) {
+		if (literal != null)
+			return new Power(exponent, literal.substitute(toSubstitute, value));
+		return this;
+	}
 	/**
 	 * Converts an input string to a power
 	 * Input

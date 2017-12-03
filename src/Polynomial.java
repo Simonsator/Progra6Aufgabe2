@@ -54,6 +54,15 @@ public class Polynomial {
 		int degreeNext = summands.getDegree();
 		return Math.max(degree, degreeNext);
 	}
+
+	Polynomial substitute(String toSubstitute, double value) {
+		if (isZero())
+			return ZERO;
+		if (summand != null) {
+			new Polynomial(summand.substitute(toSubstitute, value), summands.substitute(toSubstitute, value));
+		}
+		return new Polynomial(this);
+	}
 /**
  * @param input String representation of polynomial
  * @return the resulting polynomial

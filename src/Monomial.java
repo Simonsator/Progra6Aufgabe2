@@ -60,6 +60,12 @@ public class Monomial {
 		return new Monomial(this);
 	}
 
+	double evaluate(double defaultValue) {
+		if (isZero())
+			return 1.;
+		return factor.evaluate(defaultValue) * factors.evaluate(defaultValue);
+	}
+
 	/**
 	 * @param input String representation of monomial
 	 * @return the resulting monomial

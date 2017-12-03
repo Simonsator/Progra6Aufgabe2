@@ -55,6 +55,11 @@ public class Power {
 			return new Power(exponent, literal.substitute(toSubstitute, value));
 		return this;
 	}
+
+	double evaluate(double defaultValue) {
+		return Math.pow(literal.evaluate(defaultValue), exponent);
+	}
+
 	/**
 	 * Converts an input string to a power
 	 * Input

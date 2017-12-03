@@ -52,6 +52,17 @@ public class Literal {
 			return new Literal(this);
 		return new Literal(value);
 	}
+
+	public double evaluate(double defaultValue) {
+		switch (type) {
+			case VAR:
+				return defaultValue;
+			case VALUE:
+				return value;
+			default:
+				return value;
+		}
+	}
 	/**
 	 * Converts an input string to a literal
 	 * @param input  String representation of literal

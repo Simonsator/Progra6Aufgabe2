@@ -61,6 +61,15 @@ public class Polynomial {
 		}
 		return new Polynomial(this);
 	}
+
+	double evaluate(double defaultValue) {
+		double evaluated = 0.;
+		if (summands != null)
+			evaluated = summands.evaluate(defaultValue);
+		if (summand != null)
+			evaluated += summand.evaluate(defaultValue);
+		return evaluated;
+	}
 /**
  * @param input String representation of polynomial
  * @return the resulting polynomial

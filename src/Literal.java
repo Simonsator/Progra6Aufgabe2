@@ -47,9 +47,14 @@ public class Literal {
 	}
 
 	int getDegree() {
-		if (type == Typ.VAR)
-			return 1;
-		return 0;
+		switch (type) {
+			case VALUE:
+				return 0;
+			case VAR:
+				return 1;
+			default:
+				return 0;
+		}
 	}
 
 	public Literal substitute(String toSubstitute, double value) {

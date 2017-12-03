@@ -56,9 +56,7 @@ public class Polynomial {
 	}
 
 	Polynomial substitute(String toSubstitute, double value) {
-		if (isZero())
-			return ZERO;
-		if (summand != null) {
+		if (!isZero() && summand != null) {
 			new Polynomial(summand.substitute(toSubstitute, value), summands.substitute(toSubstitute, value));
 		}
 		return new Polynomial(this);

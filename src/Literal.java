@@ -57,6 +57,10 @@ public class Literal {
 		}
 	}
 
+	public boolean isZero() {
+		return value == 0.;
+	}
+
 	public Literal substitute(String toSubstitute, double value) {
 		if (!name.equals(toSubstitute))
 			return new Literal(this);

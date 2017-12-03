@@ -68,26 +68,27 @@ public class Literal {
 				return value;
 		}
 	}
+
 	/**
 	 * Converts an input string to a literal
-	 * @param input  String representation of literal
+	 *
+	 * @param input String representation of literal
 	 * @return the resulting literal
 	 */
-  /*public static Literal parse(String input){
-    if(input==null || input.equals("")){
-      return new Literal(1.);
-    }
-    double value = 0.;
-    String name = "";
-    input = input.replaceAll("[()]","");
-    try{
-      value = Double.parseDouble(input);
-      return new Literal(value);
-    }
-    catch(NumberFormatException e){
-      name = input;
-    }
-    return new Literal(name);
-  }*/
+	public static Literal parse(String input) {
+		if (input == null || input.equals("")) {
+			return new Literal(1.);
+		}
+		double value = 0.;
+		String name = "";
+		input = input.replaceAll("[()]", "");
+		try {
+			value = Double.parseDouble(input);
+			return new Literal(value);
+		} catch (NumberFormatException e) {
+			name = input;
+		}
+		return new Literal(name);
+	}
 
 }

@@ -70,15 +70,15 @@ public class Monomial {
 	 * @param input String representation of monomial
 	 * @return the resulting monomial
 	 */
-  /*public static Monomial parse(String input){
-    if(input==null||input.equals("")){
-      return ONE;
-    }
-    String[] splitted = input.split("\\*",2);
-    if(splitted.length==1){
-      return new Monomial(Power.parse(splitted[0]));
-    }
-    return new Monomial(Power.parse(splitted[0]),parse(splitted[1]));
-  }*/
+	public static Monomial parse(String input) {
+		if (input == null || input.equals("")) {
+			return ONE;
+		}
+		String[] splitted = input.split("\\*", 2);
+		if (splitted.length == 1) {
+			return new Monomial(Power.parse(splitted[0]));
+		}
+		return new Monomial(Power.parse(splitted[0]), parse(splitted[1]));
+	}
 
 }

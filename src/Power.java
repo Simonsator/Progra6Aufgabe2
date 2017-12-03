@@ -63,27 +63,27 @@ public class Power {
 	/**
 	 * Converts an input string to a power
 	 * Input
-	 * @param input  String representation of literal ^ exponent
+	 *
+	 * @param input String representation of literal ^ exponent
 	 * @return the resulting power
 	 */
-  /*public static Power parse(String input){
-    if(input == null || input.equals("")){
-      return new Power(Literal.parse(""));
-    }
-    String[] splitted = input.split("\\^",2);
-    if(splitted.length==1){
-      return new Power(Literal.parse(splitted[0]));
-    }
-    int exponent = 1;
-    try{
-      exponent = Integer.parseInt(splitted[1]);
-    }
-    catch(NumberFormatException e){
-      exponent = 1;
-    }
-    
-    return new Power(exponent, Literal.parse(splitted[0]));
-    
-  }*/
+	public static Power parse(String input) {
+		if (input == null || input.equals("")) {
+			return new Power(Literal.parse(""));
+		}
+		String[] splitted = input.split("\\^", 2);
+		if (splitted.length == 1) {
+			return new Power(Literal.parse(splitted[0]));
+		}
+		int exponent = 1;
+		try {
+			exponent = Integer.parseInt(splitted[1]);
+		} catch (NumberFormatException e) {
+			exponent = 1;
+		}
+
+		return new Power(exponent, Literal.parse(splitted[0]));
+
+	}
 
 }

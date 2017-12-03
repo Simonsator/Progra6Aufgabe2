@@ -48,7 +48,7 @@ public class Monomial {
 		if (factor != null)
 			degree = factor.getDegree();
 		if (factors != null)
-			degree += factor.getDegree();
+			degree += factors.getDegree();
 		return degree;
 	}
 

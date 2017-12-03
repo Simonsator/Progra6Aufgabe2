@@ -29,7 +29,7 @@ public class Power {
 	}
 
 	public boolean isZero() {
-		return literal == null || (exponent > 0 && literal.getValue() == 0.0);
+		return literal == null || (exponent > 0 && literal.isZero());
 	}
 
 	@Override

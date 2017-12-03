@@ -33,6 +33,8 @@ public class Monomial {
 	}
 
 	public boolean isZero() {
+		if (equals(ONE))
+			return false;
 		return factor == null || factor.isZero() || (factors != null && factors.isZero());
 	}
 
@@ -44,7 +46,7 @@ public class Monomial {
 	}
 
 	int getDegree() {
-		if (isZero())
+		if (isZero() || equals(ONE))
 			return 0;
 		int degree = 0;
 		if (factor != null)
@@ -55,13 +57,13 @@ public class Monomial {
 	}
 
 	Monomial substitute(String toSubstitute, double value) {
-		if (!isZero())
+		if (!isZero() && !equals(ONE))
 			return new Monomial(factor.substitute(toSubstitute, value), factors.substitute(toSubstitute, value));
 		return new Monomial(this);
 	}
 
 	double evaluate(double defaultValue) {
-		if (isZero())
+		if (isZero() || equals(ONE))
 			return 1.;
 		return factor.evaluate(defaultValue) * factors.evaluate(defaultValue);
 	}

@@ -58,7 +58,14 @@ public class Literal {
 	}
 
 	public boolean isZero() {
-		return value == 0.;
+		switch (type) {
+			case VAR:
+				return false;
+			case VALUE:
+				return value == 0.;
+			default:
+				return false;
+		}
 	}
 
 	public Literal substitute(String toSubstitute, double value) {

@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beebc57d-6af0-4943-a887-c88ed6ce2d56" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Literal.java" afterPath="$PROJECT_DIR$/src/Literal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Monomial.java" afterPath="$PROJECT_DIR$/src/Monomial.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Polynomial.java" afterPath="$PROJECT_DIR$/src/Polynomial.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Power.java" afterPath="$PROJECT_DIR$/src/Power.java" />
-    </list>
+    <list default="true" id="beebc57d-6af0-4943-a887-c88ed6ce2d56" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -208,12 +203,12 @@
       <workItem from="1512032501854" duration="25000" />
       <workItem from="1512142019811" duration="4084000" />
       <workItem from="1512247962567" duration="312000" />
-      <workItem from="1512307245407" duration="3461000" />
+      <workItem from="1512307245407" duration="3539000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8653000" />
+    <option name="totallyTimeSpent" value="8731000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1679" height="1440" extended-state="6" />
@@ -346,14 +341,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Literal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="58" column="36" lean-forward="false" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Power.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="795">
@@ -377,6 +364,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="960">
           <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Literal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>

@@ -44,6 +44,8 @@ public class Monomial {
 	}
 
 	int getDegree() {
+		if (isZero())
+			return 0;
 		int degree = 0;
 		if (factor != null)
 			degree = factor.getDegree();

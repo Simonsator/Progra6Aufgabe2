@@ -36,9 +36,14 @@ public class Literal {
 
 	@Override
 	public String toString() {
-		if (type == Typ.VAR)
-			return name;
-		return "(" + value + ")";
+		switch (type) {
+			case VAR:
+				return name;
+			case VALUE:
+				return "(" + value + ")";
+			default:
+				return name;
+		}
 	}
 
 	int getDegree() {

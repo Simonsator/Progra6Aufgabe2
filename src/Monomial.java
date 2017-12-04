@@ -71,7 +71,7 @@ public class Monomial {
 	}
 
 	double evaluate(double defaultValue) {
-		if (isZero() || equals(ONE))
+		if (equals(ONE))
 			return 1.;
 		return factor.evaluate(defaultValue) * factors.evaluate(defaultValue);
 	}

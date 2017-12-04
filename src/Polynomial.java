@@ -44,7 +44,10 @@ public class Polynomial {
 			return "0";
 		if (summand == null)
 			return String.valueOf(summands);
-		return summand + "+" + summands;
+		String summandsToString = "";
+		if (summands != null && !summands.isZero())
+			summandsToString = "+" + summands;
+		return summand + summandsToString;
 	}
 
 	int getDegree() {

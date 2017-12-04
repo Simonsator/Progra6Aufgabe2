@@ -33,9 +33,7 @@ public class Monomial {
 	}
 
 	public boolean isZero() {
-		if (equals(ONE))
-			return false;
-		return factor == null || factor.isZero() || (factors != null && factors.isZero());
+		return !equals(ONE) && (factor == null || factor.isZero() || (factors != null && factors.isZero()));
 	}
 
 	@Override

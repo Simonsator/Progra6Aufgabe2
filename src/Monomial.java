@@ -42,7 +42,10 @@ public class Monomial {
 			return "0";
 		if (factor == null || factor.isZero())
 			return "1";
-		return factor + "*" + factors;
+		String factorsToString = "";
+		if (!ONE.equals(factors))
+			factorsToString = "*" + factors.toString();
+		return factor + factorsToString;
 	}
 
 	int getDegree() {

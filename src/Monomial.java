@@ -57,9 +57,17 @@ public class Monomial {
 	}
 
 	Monomial substitute(String toSubstitute, double value) {
-		if (!isZero() && !equals(ONE))
-			return new Monomial(factor.substitute(toSubstitute, value), factors.substitute(toSubstitute, value));
-		return new Monomial(this);
+		Power newFactor = null;
+		if (factor != null)
+			newFactor = factor.substitute(toSubstitute, value);
+		Monomial newFactors = null;
+		if (factors.equals(ONE)) {
+			newFactors = ONE;
+		} else {
+			if (factors != null)
+				newFactors = factors.substitute(toSubstitute, value);
+		}
+		return new Monomial(newFactor, newFactors);
 	}
 
 	double evaluate(double defaultValue) {

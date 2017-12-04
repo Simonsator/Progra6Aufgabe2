@@ -69,9 +69,16 @@ public class Literal {
 	}
 
 	public Literal substitute(String toSubstitute, double value) {
-		if (!name.equals(toSubstitute))
-			return new Literal(this);
-		return new Literal(value);
+		switch (type) {
+			case VALUE:
+				return this;
+			case VAR:
+				if (toSubstitute.equals(name))
+					return new Literal(value);
+				return this;
+			default:
+				return this;
+		}
 	}
 
 	public double evaluate(double defaultValue) {

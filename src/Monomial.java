@@ -38,6 +38,8 @@ public class Monomial {
 
 	@Override
 	public String toString() {
+		if (isZero())
+			return "0";
 		if (factor == null || factor.isZero())
 			return "1";
 		return factor + "*" + factors;
@@ -80,5 +82,4 @@ public class Monomial {
 		}
 		return new Monomial(Power.parse(splitted[0]), parse(splitted[1]));
 	}
-
 }

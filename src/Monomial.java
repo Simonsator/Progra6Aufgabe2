@@ -61,10 +61,10 @@ public class Monomial {
 		if (factor != null)
 			newFactor = factor.substitute(toSubstitute, value);
 		Monomial newFactors = null;
-		if (factors.equals(ONE)) {
-			newFactors = ONE;
-		} else {
-			if (factors != null)
+		if (factors != null) {
+			if (factors.equals(ONE)) {
+				newFactors = ONE;
+			} else
 				newFactors = factors.substitute(toSubstitute, value);
 		}
 		return new Monomial(newFactor, newFactors);
